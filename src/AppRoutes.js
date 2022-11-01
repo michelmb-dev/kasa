@@ -5,11 +5,13 @@ import Error from "./pages/error/Error";
 
 function AppRoutes() {
 	return (
-		<Routes>
-			<Route path="/" element={<Home />} />
-			<Route path="/about" element={<About />} />
-			<Route path="*" element={<Error />} />
-		</Routes>
+		<div className="main-wrapper">
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/about" element={<About />} />
+				<Route path="*" element={<Error />} />
+			</Routes>
+		</div>
 	);
 }
 

@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: space-between;
+    gap: 20px;
+    padding-inline: 20px;
+    height: 100%;
+}
+
+.bigLetter {
+    font-size: clamp(96px, 20vw, 288px);
+    font-weight: bold;
+}
+
+.message {
+    font-size: clamp(18px, 4vw, 36px);
+}
+
+.linkHome {
+    margin: 80px auto 120px;
+    font-size: clamp(14px, 3vw, 18px);
+    color: var(--colorRed);
+    font-weight: 500;
+}
