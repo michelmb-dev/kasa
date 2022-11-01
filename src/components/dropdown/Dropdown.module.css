@@ -1,0 +1,37 @@
+.wrapper {
+    max-width: 1024px;
+    width: 100%;
+    background: var(--colorGreyLight);
+    border-radius: 5px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--colorRed);
+    color: #ffffff;
+    padding-inline: 18px;
+    padding-block: 5px;
+    border-radius: 5px;
+}
+
+.title {
+    font-weight: 500;
+    font-size: clamp(14px, 2vw, 24px);;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(22px, 2vw, 28px);
+    aspect-ratio: 1 / 1;
+}
+
+.body {
+    padding: 26px 18px 18px 18px;
+    font-size: clamp(12px, 2vw, 24px);
+    text-align: justify;
+    text-justify: inter-word;
+}
