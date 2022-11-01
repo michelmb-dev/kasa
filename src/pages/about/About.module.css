@@ -1,0 +1,15 @@
+.wrapper {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 31px;
+}
+
+@media  screen and (max-width: 768px) {
+    .wrapper {
+        margin: 20px 0;
+        gap: 20px;
+    }
+}
