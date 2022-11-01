@@ -5,7 +5,7 @@ import styles from "./Home.module.css";
 function Home() {
 	return (
 		<>
-			<Landing background={background}>
+			<Landing background={background} styleHeight={styles.landingHeight}>
 				<h1 className={styles.landingTitle}>
 					<span>Chez vous,&nbsp;</span><span>partout et ailleurs</span>
 				</h1>

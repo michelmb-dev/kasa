@@ -11,3 +11,9 @@
 .landingTitle span {
     color: #ffffff;
 }
+
+@media screen and (max-width: 768px) {
+    .landingHeight {
+        height: 111px;
+    }
+}

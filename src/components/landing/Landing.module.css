@@ -6,7 +6,6 @@
     align-items: center;
     height: 223px;
     position: relative;
-
 }
 
 .landing::before {
@@ -25,7 +24,6 @@
 
 @media screen and (max-width: 768px) {
     .landing {
-        height: 111px;
         border-radius: 10px;
     }
 }
