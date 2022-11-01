@@ -1,7 +1,10 @@
+import AppRoutes from "./AppRoutes";
 
 function App() {
   return (
-    <h1>Kasa</h1>
+    <>
+      <AppRoutes/>
+    </>
   );
 }
 
