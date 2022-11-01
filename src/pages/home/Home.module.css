@@ -12,8 +12,33 @@
     color: #ffffff;
 }
 
+.cards {
+    margin-block: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    justify-content: space-between;
+    padding: 50px;
+    border-radius: 25px;
+    background: var(--colorGreyLight);
+}
+
+@media screen and (max-width: 998px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media screen and (max-width: 768px) {
     .landingHeight {
         height: 111px;
+    }
+
+    .cards {
+        margin-block: 22px;
+        grid-template-columns: 1fr;
+        background: none;
+        padding: 0;
+        gap: 22px;
     }
 }
