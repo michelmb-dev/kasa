@@ -1,0 +1,31 @@
+.landing {
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 223px;
+    position: relative;
+
+}
+
+.landing::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background: #000000;
+    mix-blend-mode: darken;
+    opacity: .3;
+}
+
+.landing img {
+    object-fit: cover;
+    height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .landing {
+        height: 111px;
+        border-radius: 10px;
+    }
+}

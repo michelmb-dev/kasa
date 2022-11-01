@@ -1,7 +1,15 @@
+import Landing from "../../components/landing/Landing";
+import background from "../../assets/bg-home.png";
+import styles from "./Home.module.css";
+
 function Home() {
 	return (
 		<>
-      <div>Home</div>
+			<Landing background={background}>
+				<h1 className={styles.landingTitle}>
+					<span>Chez vous,&nbsp;</span><span>partout et ailleurs</span>
+				</h1>
+			</Landing>
 		</>
 	);
 }

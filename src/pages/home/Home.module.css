@@ -1,0 +1,13 @@
+.landingTitle {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    font-size: clamp(24px, 5vw, 48px);
+    font-weight: 500;
+    white-space: nowrap;
+    margin-inline: 16px;
+}
+
+.landingTitle span {
+    color: #ffffff;
+}

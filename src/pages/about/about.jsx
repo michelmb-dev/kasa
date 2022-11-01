@@ -1,7 +1,10 @@
+import Landing from "../../components/landing/Landing";
+import background from "../../assets/bg-about.png";
+
 function about() {
 	return (
 		<>
-			<div>about</div>
+			<Landing background={background}/>
 		</>
 	);
 }
