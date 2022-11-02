@@ -3,18 +3,9 @@ import background from "../../assets/bg-home.png";
 import styles from "./Home.module.css";
 import useFetch from "../../hooks/useFetch";
 import Card from "../../components/card/Card";
-import {useNavigate} from "react-router-dom";
 
 function Home() {
-
-	const {data, error} = useFetch("logements.json");
-	const navigate = useNavigate();
-
-	console.log(data)
-	if (error || data === null) {
-		return navigate("/404");
-	}
-
+	const data = useFetch("logements.json");
 	return (
 		<>
 			<Landing background={background} styleHeight={styles.landingHeight}>

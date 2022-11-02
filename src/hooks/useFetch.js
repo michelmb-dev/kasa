@@ -1,25 +1,24 @@
 import {useEffect, useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 
 function useFetch(url) {
 	const [data, setData] = useState(null);
-	const [error, setError] = useState(false);
+	const navigate = useNavigate();
 
 	useEffect(() => {
-			fetch(url,{
-				headers : {
-					'Content-Type': 'application/json',
-					'Accept': 'application/json'
-				}
-			})
-				.then((res) => res.json())
-				.then((data) => setData(data))
-				.catch((e) => {
-					setError(false);
+			const fetchData = async () => {
+				const response = await fetch(url);
+				setData(await response.json())
+			}
+			fetchData().catch((e) => {
+				if (data === null) {
 					console.error(e);
-				});
-	}, [url]);
-	return {data, error};
+					navigate("/404")
+				}
+			});
+	}, [data, navigate, url]);
+	return data;
 }
 
 export default useFetch;
