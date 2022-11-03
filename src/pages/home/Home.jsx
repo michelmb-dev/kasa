@@ -1,11 +1,11 @@
 import Landing from "../../components/landing/Landing";
 import background from "../../assets/bg-home.png";
 import styles from "./Home.module.css";
-import useFetch from "../../hooks/useFetch";
 import Card from "../../components/card/Card";
+import {useOutletContext} from "react-router-dom";
 
 function Home() {
-	const data = useFetch("logements.json");
+	const data = useOutletContext();
 	return (
 		<>
 			<Landing background={background} styleHeight={styles.landingHeight}>
