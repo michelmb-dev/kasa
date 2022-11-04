@@ -1,15 +1,27 @@
-import {useOutletContext, useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
+import {useEffect, useState} from "react";
 
 function Housing() {
-	const housings = useOutletContext();
 	const {id} = useParams();
-	const housing = housings.find((h) => h.id === id);
+	const [housing, setHousing] = useState({});
+	const navigate = useNavigate();
+
+	useEffect(() => {
+		const getHousing = () => {
+			fetch('../logements.json')
+				.then((res) => res.json())
+				.then((datas) => {
+					const data = datas.find(d => d.id === id);
+					setHousing(data);
+					if (data === undefined) navigate('/error');
+				}).catch(() => navigate("/error"));
+		}
+		getHousing();
+	},[id, navigate])
 
 	return (
 		<>
-			{housing &&
-				<div>{housing.title}</div>
-			}
+			<div>{housing.title}</div>
 		</>
 	);
 }

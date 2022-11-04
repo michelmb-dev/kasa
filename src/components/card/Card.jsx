@@ -7,7 +7,7 @@ function Card({data}) {
 	const navigate = useNavigate();
 
 	const handleNavigate = () => {
-		navigate(`/${id}`);
+		navigate(`/housing/${id}`);
 	}
 
 	return (
