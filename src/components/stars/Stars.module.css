@@ -1,0 +1,9 @@
+.stars {
+    color: var(--colorGreyDark);
+    font-size: 34px;
+    letter-spacing: 2px;
+}
+
+.starActive {
+    color: var(--colorRed);
+}
