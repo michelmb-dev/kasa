@@ -1,9 +1,23 @@
 .stars {
     color: var(--colorGreyDark);
     font-size: 34px;
+    text-align: right;
     letter-spacing: 2px;
 }
 
 .starActive {
     color: var(--colorRed);
+}
+
+@media screen and (max-width: 991px) {
+    .stars {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .stars {
+        text-align: left;
+        font-size: 18px;
+    }
 }

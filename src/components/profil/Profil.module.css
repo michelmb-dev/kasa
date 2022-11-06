@@ -7,7 +7,7 @@
 .author {
     font-size: 18px;
     line-height: 26px;
-    max-width: 100px;
+    max-width: 80px;
     text-align: right;
     font-weight: 500;
 
@@ -18,5 +18,32 @@
     aspect-ratio: 1/1;
     border-radius: 50%;
     overflow: hidden;
+}
+
+
+@media screen and (max-width: 991px) {
+    .author {
+        font-size: 14px;
+        line-height: 20px;
+        max-width: 60px;
+    }
+
+    .avatar {
+        max-width: 48px;
+        aspect-ratio: 1/1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .author {
+        font-size: 12px;
+        line-height: 14px;
+        max-width: 50px;
+    }
+
+    .avatar {
+        max-width: 32px;
+        aspect-ratio: 1/1;
+    }
 }
 
