@@ -24,6 +24,7 @@ body {
 :root {
   --colorRed: #FF6060;
   --colorGreyLight: #F6F6F6;
+  --colorGreyDark: #E3E3E3;
   --colorDark: #000000;
 }
 
@@ -41,6 +42,7 @@ button {
 
 .main-wrapper {
   max-width: 1280px;
+  width: 100%;
   margin-inline: auto;
   padding-inline: 20px;
   flex: 1;
