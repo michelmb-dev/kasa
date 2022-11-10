@@ -1,8 +1,11 @@
 .wrapper {
     max-width: 1024px;
     width: 100%;
-    background: var(--colorGreyLight);
     border-radius: 10px;
+}
+
+.openWrapper {
+    background: var(--colorGreyLight);
 }
 
 .header {

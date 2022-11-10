@@ -5,7 +5,7 @@ function Dropdown({ title, children }) {
   const [isOpen, setIsOpen] = useState(false)
 
 	return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} ${isOpen && styles.openWrapper}`}>
       <div className={styles.header}>
         <h2 className={styles.title}>{title}</h2>
         <button onClick={() => !isOpen ? setIsOpen(true) : setIsOpen(false)} className={styles.btn}>
