@@ -19,10 +19,12 @@ function Carousel({arrayImages}) {
 
   return (
 		<div className={styles.container}>
-        <div className={styles.slide}>
-          <img className={styles.image} src={arrayImages[currentSlide]} alt="aperçu du logement"/>
-          <p className={styles.info}>{currentSlide + 1} / {arrayImages.length}</p>
-        </div>
+				{arrayImages.map((img, index) => (
+					<div key={index} className={currentSlide === index ? `${styles.slide} ${styles.active}` : styles.slide}>
+						<img className={styles.image} src={img} alt="aperçu du logement"/>
+					</div>
+				))}
+				<p className={styles.info}>{currentSlide + 1}/{arrayImages.length}</p>
       {arrayImages.length > 1 && (
         <>
           <span className={`${styles.btn} ${styles.prevSlide}`} onClick={prevSlide}>
