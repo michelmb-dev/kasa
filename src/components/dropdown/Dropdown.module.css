@@ -34,9 +34,6 @@
 
 .body {
     padding: 26px 18px 18px 18px;
-    font-size: clamp(12px, 2vw, 24px);
-    text-align: justify;
-    text-justify: inter-word;
 }
 
 @media screen and (max-width: 768px) {
