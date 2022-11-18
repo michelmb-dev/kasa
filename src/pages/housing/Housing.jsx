@@ -13,16 +13,13 @@ function Housing() {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		const getHousing = () => {
-			fetch('../logements.json')
-				.then((res) => res.json())
-				.then((datas) => {
-					const data = datas.find(d => d.id === id);
-					setHousing(data);
-					if (data === undefined) navigate('/error');
-				}).catch(() => navigate("/error"));
-		}
-		getHousing();
+		fetch('../logements.json')
+			.then((res) => res.json())
+			.then((datas) => {
+				const data = datas.find(d => d.id === id);
+				setHousing(data);
+				if (data === undefined) navigate('/error');
+			}).catch(() => navigate("/error"));
 	},[id, navigate]);
 
 

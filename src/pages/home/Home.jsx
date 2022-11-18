@@ -10,13 +10,10 @@ function Home() {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		const fetchData = () => {
-			fetch("../logements.json")
-				.then((res) => res.json())
-				.then((d) => setHousings(d))
-				.catch(() =>	navigate("/error"));
-		};
-		fetchData();
+		fetch("../logements.json")
+			.then((res) => res.json())
+			.then((d) => setHousings(d))
+			.catch(() =>	navigate("/error"));
 	}, [navigate]);
 
 	return (
