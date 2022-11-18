@@ -1,13 +1,14 @@
 import {useState} from "react";
 import styles from "./Dropdown.module.css";
 
-function Dropdown({ title, children }) {
+function Dropdown({ smallVariant = false, title, children }) {
   const [isOpen, setIsOpen] = useState(false)
 
+
 	return (
-    <div className={`${styles.wrapper} ${isOpen && styles.openWrapper}`}>
-      <div className={styles.header}>
-        <h2 className={styles.title}>{title}</h2>
+    <div className={smallVariant ? styles.wrapperSmall : styles.wrapper}>
+      <div className={smallVariant ? styles.headerSmall : styles.header}>
+        <h2 className={smallVariant ? styles.titleSmall : styles.title}>{title}</h2>
         <button onClick={() => !isOpen ? setIsOpen(true) : setIsOpen(false)} className={styles.btn}>
           {isOpen ? (
             <svg width="24" height="15" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,7 +23,7 @@ function Dropdown({ title, children }) {
         </button>
       </div>
       {isOpen &&
-        <div className={styles.body}>
+        <div className={smallVariant ? styles.bodySmall : styles.body}>
           {children}
         </div>
       }

@@ -1,11 +1,16 @@
 .wrapper {
-    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    height: available;
     border-radius: 10px;
+    justify-content: flex-start;
+    max-width: 1024px;
 }
 
-.openWrapper {
-    background: var(--colorGreyLight);
+.wrapperSmall {
+    composes: wrapper;
+    max-width: 582px;
 }
 
 .header {
@@ -14,14 +19,27 @@
     align-items: center;
     background: var(--colorRed);
     color: #ffffff;
-    padding-inline: 18px;
-    padding-block: 5px;
+    padding: 0 18px;
+    min-height: 47px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.headerSmall {
+    composes: header;
     border-radius: 10px;
+    min-height: 52px;
+    padding: 0 12px;
 }
 
 .title {
     font-weight: 500;
-    font-size: clamp(14px, 2vw, 24px);;
+    font-size: clamp(14px, 2vw, 24px);
+}
+
+.titleSmall {
+    composes: title;
+    font-size: clamp(14px, 2vw, 18px);
 }
 
 .btn {
@@ -34,10 +52,31 @@
 
 .body {
     padding: 26px 18px 18px 18px;
+    background: var(--colorGreyLight);
+    border-radius: 0 0 10px 10px;
+    transform: translateY(-5px);
+    height: 100%;
+    font-size: clamp(12px, 2vw, 24px);
+    text-align: justify;
+    text-justify: inter-word;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.bodySmall {
+    composes: body;
+    font-size: clamp(12px, 2vw, 18px);
+    font-weight: 400;
 }
 
 @media screen and (max-width: 768px) {
-    .header {
+    .wrapperSmall {
+        max-width: 100%;
+    }
+
+    .header, .headerSmall {
+        min-height: 30px;
+        border-radius: 5px;
         padding-inline: 11px;
     }
 }
