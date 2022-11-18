@@ -44,12 +44,12 @@ function Housing() {
 					</div>
 				</div>
 				<div className={styles.bodyWrapper}>
-					<Dropdown title="Description">
-						<p className={styles.text}>{description}</p>
+					<Dropdown smallVariant={true} title="Description">
+						<p>{description}</p>
 					</Dropdown>
-					<Dropdown title="Équipements">
+					<Dropdown smallVariant={true} title="Équipements">
 						{equipments && equipments.map((text, index) => (
-							<p className={styles.text} key={index}>{text}</p>
+							<p key={index}>{text}</p>
 						))}
 					</Dropdown>
 				</div>
