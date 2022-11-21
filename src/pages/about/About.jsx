@@ -1,12 +1,14 @@
-import Landing from "../../components/landing/Landing";
+import Banner from "../../components/banner/Banner";
 import background from "../../assets/bg-about.png";
 import styles from "./About.module.css";
 import Dropdown from "../../components/dropdown/Dropdown";
 
+
 function About() {
+	document.title = "Kasa - À Propos";
 	return (
 		<>
-			<Landing background={background}/>
+			<Banner background={background}/>
 			<section className={styles.wrapper}>
 				<Dropdown title="Fiabilité">
 					<p>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements et toutes les informations sont régulièrement vérifiées par nos équipes.</p>

@@ -2,6 +2,7 @@ import {Link} from "react-router-dom";
 import styles from "./Error.module.css";
 
 function Error404() {
+		document.title = "Kasa - 404";
 		return (
 			<section className={styles.wrapper}>
 				<div className={styles.bigLetter}>404</div>

@@ -22,8 +22,10 @@ function Housing() {
 			}).catch(() => navigate("/error"));
 	},[id, navigate]);
 
+	const {title, location, pictures, rating, host, tags, description, equipments} = housing;
 
-	const {pictures, rating, host, tags, description, equipments} = housing;
+	document.title = `Kasa - ${title}`;
+
 	return (
 			<>
 				{pictures &&
@@ -31,8 +33,8 @@ function Housing() {
 				}
 				<div className={styles.headerWrapper}>
 					<div className={styles.title}>
-						<h2>{housing.title}</h2>
-						<p>{housing.location}</p>
+						<h2>{title}</h2>
+						<p>{location}</p>
 						{tags && <Tags tags={tags}/>}
 					</div>
 					<div className={styles.author}>
