@@ -1,4 +1,4 @@
-.landing {
+.wrapper {
     border-radius: 25px;
     overflow: hidden;
     display: flex;
@@ -8,7 +8,7 @@
     position: relative;
 }
 
-.landing::before {
+.wrapper::before {
     position: absolute;
     content: '';
     inset: 0;
@@ -17,13 +17,13 @@
     opacity: .3;
 }
 
-.landing img {
+.wrapper img {
     object-fit: cover;
     height: 100%;
 }
 
 @media screen and (max-width: 768px) {
-    .landing {
+    .wrapper {
         border-radius: 10px;
     }
 }
