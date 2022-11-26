@@ -12,7 +12,7 @@ function Header() {
 				</NavLink>
 				<NavLink className={({isActive}) => isActive ? `${styles.link} ${styles.linkActive}` : styles.link }
 					end to="/about">
-					à propos
+					a propos
 				</NavLink>
 			</nav>
 		</header>
