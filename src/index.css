@@ -49,16 +49,3 @@ button {
   padding-inline: 20px;
   flex: 1;
 }
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--colorRed);
-  border-radius: 4px;
-}
