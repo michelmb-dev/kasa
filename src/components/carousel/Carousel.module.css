@@ -47,10 +47,6 @@
     transition: fill 350ms;
 }
 
-.btn:hover svg {
-    fill: var(--colorRed);
-}
-
 .nextSlide {
     right: 0;
 }
